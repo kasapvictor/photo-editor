@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Photo Filter</title>
+	<link rel="stylesheet" href="./styles.css">
+	<link href="https://kasapvictor.ru/wp-content/themes/kasapvictor/assets/images/3256x256.png" rel="apple-touch-icon">
+	<link href="https://kasapvictor.ru/wp-content/themes/kasapvictor/assets/images/32x32.png" rel="shortcut icon"
+	      type="image/x-icon">
+</head>
+<body class="body">
+
+<div class="container">
+	<div class="app">
+		<div class="app__title">
+			<h1 class="app__title-text">Photo Filter</h1>
+		</div>
+
+		<div class="app__inner">
+			<div class="app__col-left">
+				<div class="app__filters">
+					<!-- size -->
+					<div class="app__range range" data-range="scale">
+						<div class="range__header">
+							<div class="range__title">Scale: &times;<span class="range__value">1</span></div>
+						</div>
+						<label class="range__field">
+							<input type="range" class="range__input" min="0" max="100" value="100" step="1" name="scale">
+							<span class="range__fill range__fill--100"></span>
+							<span class="range__fill-bg"></span>
+						</label>
+					</div>
+
+					<!-- blur -->
+					<div class="app__range range" data-range="blur">
+						<div class="range__header">
+							<div class="range__title">Blur: <span class="range__value">0</span></div>
+						</div>
+						<label class="range__field">
+							<input type="range" class="range__input" min="0" max="100" value="0" step="1" name="blur">
+							<span class="range__fill range__fill--0"></span>
+							<span class="range__fill-bg"></span>
+						</label>
+					</div>
+
+					<!-- invert -->
+					<div class="app__range range" data-range="invert">
+						<div class="range__header">
+							<div class="range__title">Invert: <span class="range__value">0</span></div>
+						</div>
+						<label class="range__field">
+							<input type="range" class="range__input" min="0" max="100" value="0" step="1" name="invert">
+							<span class="range__fill range__fill--0"></span>
+							<span class="range__fill-bg"></span>
+						</label>
+					</div>
+
+					<!-- sepia -->
+					<div class="app__range range" data-range="sepia">
+						<div class="range__header">
+							<div class="range__title">Sepia: <span class="range__value">0</span></div>
+						</div>
+						<label class="range__field">
+							<input type="range" class="range__input" min="0" max="100" value="0" step="1" name="sepia">
+							<span class="range__fill range__fill--0"></span>
+							<span class="range__fill-bg"></span>
+						</label>
+					</div>
+
+					<!-- hue rotate -->
+					<div class="app__range range" data-range="hue-rotate">
+						<div class="range__header">
+							<div class="range__title">Hue: <span class="range__value">0</span></div>
+						</div>
+						<label class="range__field">
+							<input type="range" class="range__input" min="0" max="100" value="0" step="1" name="hue-rotate">
+							<span class="range__fill range__fill--0"></span>
+							<span class="range__fill-bg"></span>
+						</label>
+					</div>
+
+					<!-- contrast -->
+					<div class="app__range range" data-range="contrast">
+						<div class="range__header">
+							<div class="range__title">Contrast: <span class="range__value">0.1</span></div>
+						</div>
+						<label class="range__field">
+							<input type="range" class="range__input" min="0" max="100" value="10" step="1" name="contrast">
+							<span class="range__fill range__fill--10"></span>
+							<span class="range__fill-bg"></span>
+						</label>
+					</div>
+
+					<!-- brightness -->
+					<div class="app__range range" data-range="brightness">
+						<div class="range__header">
+							<div class="range__title">Brightness: <span class="range__value">0.1</span></div>
+						</div>
+						<label class="range__field">
+							<input type="range" class="range__input" min="0" max="100" value="10" step="1" name="brightness">
+							<span class="range__fill range__fill--10"></span>
+							<span class="range__fill-bg"></span>
+						</label>
+					</div>
+
+					<!-- grayscale -->
+					<div class="app__range range" data-range="grayscale">
+						<div class="range__header">
+							<div class="range__title">Grayscale: <span class="range__value">0</span></div>
+						</div>
+						<label class="range__field">
+							<input type="range" class="range__input" min="0" max="100" value="0" step="1" name="grayscale">
+							<span class="range__fill range__fill--0"></span>
+							<span class="range__fill-bg"></span>
+						</label>
+					</div>
+
+					<div class="app__filers-row">
+						<button class="app__button app__filters-reset">reset</button>
+					</div>
+
+				</div>
+			</div>
+
+			<div class="app__col-right">
+				<div class="app__preview">
+					<img class="app__image app__preview-img" src="./city.jpg" alt="Preview ">
+				</div>
+				<div class="app__preview-presets">
+					<button class="app__button app__preset app__preset--1" data-preset="1">
+						<img class="app__image app__preset-img" src="./city.jpg" alt="Preview ">
+					</button>
+					<button class="app__button app__preset app__preset--2" data-preset="2">
+						<img class="app__image app__preset-img" src="./city.jpg" alt="Preview ">
+					</button>
+					<button class="app__button app__preset app__preset--3" data-preset="3">
+						<img class="app__image app__preset-img" src="./city.jpg" alt="Preview ">
+					</button>
+					<button class="app__button app__preset app__preset--4" data-preset="4">
+						<img class="app__image app__preset-img" src="./city.jpg" alt="Preview ">
+					</button>
+					<button class="app__button app__preset app__preset--5" data-preset="5">
+						<img class="app__image app__preset-img" src="./city.jpg" alt="Preview ">
+					</button>
+				</div>
+				<div class="app__preview-buttons">
+					<label class="app__button app__preview-button app__button-upload" >
+						upload <span class="text--small text--white text--block">( jpeg, jpg, png )</span>
+						<input class="hide" type="file" name="upload" accept="image/*">
+					</label>
+
+					<button class="app__button app__preview-button app__button-download">download</button>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>
+<canvas id="canvasImg" class="hide"></canvas>
+<script src="scripts.js"></script>
+</body>
+</html>
